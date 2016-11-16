@@ -1,0 +1,76 @@
+/* Override */
+body {
+    font-size: 14px;
+    font-family: "colfaxRegular", Helvetica, Arial, sans-serif;
+}
+
+/* DataTables */
+th.dt-center, td.dt-center { text-align: center; }
+div.dataTables_wrapper div.dataTables_length select {  width: auto !important;  padding: 0px 5px; }
+#presentationsDataTable td, #presentation-files-table td {  vertical-align: middle; }
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #fafafa;
+}
+
+
+.description-block>.description-header {
+    font-family: 'colfaxRegular', Arial, sans-serif;
+    font-weight: normal;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bg-dark-gray {
+    color: #fff !important;
+    background-color: #333 !important
+}
+
+.btn.bg-dark-gray:hover {
+    color: #aaa !important
+}
+
+.input-group-addon {
+    border-left-width: 1px !important;
+    border-right-width: 1px !important;
+}
+
+.text-dark-gray {
+    color: #333 !important;
+}
+
+/* Override AdminLTE and use UNINETT red */
+.box.box-danger {
+    border-top-color: #eb212e
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 1.1);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.pulsate {
+    -webkit-animation: pulse 1s linear infinite;
+    animation: pulse 1s linear infinite;
+}
+

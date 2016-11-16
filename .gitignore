@@ -1,0 +1,4 @@
+.idea*
+app/js/auth/*auth.js
+colfax*.*
+presentations*.json
