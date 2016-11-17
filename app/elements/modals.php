@@ -1,7 +1,7 @@
 <div id="relayModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="title">
 	<div class="modal-dialog" role="document"> <!-- modal-lg / modal-sm -->
-		<div class="modal-content">
-			<div class="modal-header bg-dark-gray">
+		<div class="modal-content bg-black-gradient">
+			<div class="modal-header bg-black-gradient">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
 				<h4 id="title" class="modal-title uninett-fontColor-white"></h4>
 			</div>
@@ -12,7 +12,7 @@
 				</div>
 			</div>
 
-			<div class="modal-footer bg-dark-gray">
+			<div class="modal-footer bg-black-gradient">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Lukk</button>
 			</div>
 		</div><!-- /.modal-content -->
@@ -24,34 +24,39 @@
 <!-- TEMPLATES -->
 
 	<div id="presentationInfoBody" class="collapse">
-		<p id="presentation_description" style="font-style: italic;"><!--></p>
-		<p class="pull-right text-sm text-muted"><span id="presentation_author" ><!--></span>, <span id="presentation_date"><!--></span></p>
+		<!-- Hidden by default, shown if description exists -->
+		<blockquote id="presentation_info" class="blockquote-reverse" style="font-style: italic;">
+			<p id="description"><!--></p>
+			<footer>
+				<span id="author"><!--></span>, <span id="date"><!--></span>
+			</footer>
+		</blockquote>
 
 		<div align="center" class="">
 		    <video id="presentation_preview" controls class="embed-responsive-item" width="100%">
 			    <!-- AJAX -->
 		    </video>
+			<p class="text-sm text-muted icon ion-android-download"> Høyreklikk på video for å lagre</p>
 		</div>
 		<div class="meta">
-			<code id="presentation_duration" class="label text-sm text-dark-gray uninett-color-white pull-right"></code>
-			<p class="text-muted text-sm">Opptaket ble gjort på <span id="presentation_platform"><!--></span> med <span id="presentation_resolution"><!--></span> som høyeste tilgjengelige oppløsning.</p>
+			<code id="presentation_duration" class="text-sm text-gray bg-black-gradient pull-right"></code>
+			<p class="text-sm">Opptaket ble gjort på <span id="presentation_platform"><!--></span> med <span id="presentation_resolution"><!--></span> som høyeste tilgjengelige oppløsning.</p>
 		</div>
 		<hr>
 		<!-- FILES TABLE -->
-		<div class="box box-solid">
-            <div class="box-header bg-dark-gray img-rounded">
-	            <span id="presentation_hits" class="badge bg-green pull-right"><!--></span>
-                <h3 class="box-title">Mediafiler</h3>
+		<div class="box box-solid bg-dark-gray img-rounded">
+            <div class="box-header">
+	            <span id="presentation_hits_last" class="text-sm text-muted pull-right"><!--></span>
+                <h3 class="box-title">Mediafiler &nbsp; <sup id="presentation_hits" class="badge bg-green"><!--></sup></h3>
             </div>
 
-            <div class="box-body table-responsive">
-	            <span id="presentation_hits_last" class="text-muted text-sm pull-right"><!--></span>
-	            <span class="text-muted text-sm">Alle lenker peker direkte til mediafil.</span>
+            <div class="box-body table-responsive bg-dark-gray">
+	            <p>Lenker som du kan dele med andre.</p>
                 <table id="presentation-files-table" class="table table-condensed borderless">
                     <thead>
                         <th style="width: 10%;">Format</th>
-                        <th>Lenke</th>
-                        <th style="width: 10%;">Lagre</th>
+                        <th style="width: 10%; text-align: center;">Spill</th>
+                        <th style="text-align: right;">Kopier</th>
                     </thead>
                     <tbody>
                         <!-->
@@ -97,7 +102,7 @@
 <!-- -->
 <div id="clientHistoryTable" class="table-responsive display collapse">
 	<p>Historisk oversikt over de ulike enheter du har brukt med Relay Recorder og/eller Fuse (mobil app)</p>
-	<table id="clientHistoryDataTable" class="table table-striped table-hover table-condensed" style="width: 100%">
+	<table id="clientHistoryDataTable" class="table table-condensed" style="width: 100%">
 		<thead>
 			<tr>
 				<th>Enhet</th>

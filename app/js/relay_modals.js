@@ -51,10 +51,12 @@ var RELAY_MODALS = (function () {
 		// Clone HTML template for modal body
 		var $body = $('#presentationInfoBody').clone();
 		// Update fields in body
-		$body.find('#presentation_description').html(presentationObj.description);
-		$body.find('#presentation_author').html(presentationObj.presenter_name);
+		$body.find('#presentation_info').find("#description").html(presentationObj.description);
+		$body.find('#presentation_info').find('#author').html(presentationObj.presenter_name);
+		$body.find('#presentation_info').find('#date').html(moment.unix(presentationObj.timestamp).format('DD.MM.YYYY'));
+
 		$body.find('#presentation_duration').html(UTILS.secToTime(presentationObj.duration_ms / 1000));
-		$body.find('#presentation_date').html(moment.unix(presentationObj.timestamp).format('DD.MM.YYYY'));
+
 		$body.find('#presentation_resolution').html(presentationObj.max_resolution);
 		// Wire DELETE button
 		$body.find('#presentation_delete').attr('data-presid', presId);
@@ -127,18 +129,18 @@ var RELAY_MODALS = (function () {
 				$body.find('#presentation-files-table').find('tbody').append(
 					'<tr>' +
 					'<td>' + fileObj.encoding + '</td>' +
-					'<td>' +
-					'<div class="input-group input-group-sm">' +
-					// ID to be used by clipboard.js
-					'<input type="text" id="file_' + index + '" class="form-control" readonly style="background-color: #FFF;" value="' + fileObj.url + '">' +
-					'<span class="input-group-btn">' +
-					// Add attrib used by clipboard.js to button
-					'<button type="button" class="btn bg-light-blue btn-flat icon ion-clipboard" data-clipboard-target="#file_' + index + '" data-toggle="tooltip" data-placement="top" title="Kopier lenke" data-original-title="Kopier"></button>' +
-					'</span>' +
-					'</div>' +
+					'<td style="text-align: center;">' +
+					'<a type="button" href="' + fileObj.url + '" class="btn bg-dark-gray text-red btn-sm icon ion-ios-play" target="_blank"></a>' +
 					'</td>' +
 					'<td>' +
-					'<a href="' + fileObj.url + '" class="text-sm" target="_blank">høyreklikk...</a>' +
+						'<div class="input-group input-group-sm">' +
+						// ID to be used by clipboard.js
+						'<input type="text" id="file_' + index + '" class="form-control mediaDirectLink" readonly style="background-color: #FFF;" value="' + fileObj.url + '">' +
+						'<span class="input-group-btn">' +
+						// Add attrib used by clipboard.js to button
+						'<button type="button" class="btn bg-light-blue btn-flat icon ion-clipboard" data-clipboard-target="#file_' + index + '" data-toggle="tooltip" data-placement="top" title="Kopier lenke" data-original-title="Kopier"></button>' +
+						'</span>' +
+						'</div>' +
 					'</td>' +
 					'</tr>');
 			});
