@@ -86,7 +86,7 @@ var RELAY = (function () {
 				var message =
 					"<p>Forespørsel <code>" + route + "</code> feilet med melding: </p>" +
 					"<p class='well'>" + JSON.parse(jqXHR.responseText).message + "</p>" +
-					"<p><button onclick=''>Last siden på nytt?</button></p>";
+					"<p><button class='btn btn-default icon ion-refresh' onclick='location.reload();'> Last siden på nytt?</button></p>";
 				UTILS.alertError(title, message);
 			});
 	}

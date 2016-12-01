@@ -45,45 +45,37 @@
 						<div class="col-sm-3 col-xs-6">
 							<div class="description-block border-right">
 								<h5 class="description-header"><span class="badge bg-gray xhr accountPresentationCount"><!--></span></h5>
-								<span class="description-text uppercase">Totalt</span>
+								<span class="description-text uppercase">Totalt</span><br>
+								<small>Ink. slettet</small>
 							</div><!-- /.description-block -->
 						</div><!-- /.col -->
 
 						<div class="col-sm-3 col-xs-6">
 							<div class="description-block border-right">
 								<h5 class="description-header"><span class="badge bg-green xhr accountPresentationNotDeletedCount"><!--></span></h5>
-								<span class="description-text uppercase">Tilgjengelige</span>
+								<span class="description-text uppercase">Tilgjengelige</span><br>
+								<small>Se tabell over</small>
 							</div><!-- /.description-block -->
 						</div><!-- /.col -->
 
 						<div class="col-sm-3 col-xs-6">
 							<div class="description-block border-right">
 								<h5 class="description-header"><span class="badge bg-yellow xhr accountPresentationRestorableCount"><!--></span></h5>
-								<span class="description-text uppercase">Kan gjenopprettes</span>
+								<span class="description-text uppercase">Kan gjenopprettes</span><br>
+								<small>Se tabell under</small>
 							</div><!-- /.description-block -->
 						</div><!-- /.col -->
 
 						<div class="col-sm-3 col-xs-6">
 							<div class="description-block">
 								<h5 class="description-header"><kbd class="uninett-color-white text-dark-gray xhr accountPresentationsNotDeletedDuration"><!--></kbd></h5>
-								<span class="description-text uppercase">Varighet</span>
+								<span class="description-text uppercase">Varighet</span><br>
+								<small>Sum av alle tilgjengelige</small>
 							</div><!-- /.description-block -->
 						</div>
 					</div><!-- /.row -->
 				</div><!-- /.box-footer -->
 
-				<div class="box-footer">
-					<h5 href="#presentationInfoContent" class="box-header text-muted collapsed text-light-blue" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="presentationInfoContent"">
-						<span id="presentationInfoIcon" class="icon ion-ios-arrow-right"> Info&hellip;</span>
-					</h5>
-					<div class="panel-collapse collapse" role="tabpanel" id="presentationInfoContent" aria-expanded="false">
-						<ul class="list-group">
-							<li class="list-group-item">Presentasjoner som er slettet permanent vil ikke dukke opp i oversikten, men er likevel tatt med i totalantall.</li>
-							<li class="list-group-item">Varighet = summen av alle tilgjengelige presentasjoner.</li>
-							<li class="list-group-item">Historikk for hits (visninger) går tilbake til <span class="hitsFirstRecord xhr"><!--></span>: evt. hits før denne dato er ikke medregnet.</li>
-						</ul>
-					</div>
-				</div>
 				<div class="overlay ajax">
 					<i class="fa fa-spinner fa-pulse"></i>
 				</div>

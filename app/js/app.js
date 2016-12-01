@@ -65,14 +65,6 @@ var APP = (function () {
 		$('.userImage').attr('src', USER.photo());
 	}
 
-	// Cosmetics (change icon on collapse/expand)
-	$('#presentationInfoContent').on('show.bs.collapse', function () {
-		$("#presentationInfoIcon").removeClass("ion-ios-arrow-right").addClass("ion-ios-arrow-down");
-	});
-	$('#presentationInfoContent').on('hide.bs.collapse', function () {
-		$("#presentationInfoIcon").removeClass("ion-ios-arrow-down").addClass("ion-ios-arrow-right");
-	});
-
 	$('.logout').on('click', function () {
 		DP_AUTH.logout();
 	});

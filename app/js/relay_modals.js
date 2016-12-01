@@ -26,9 +26,11 @@ var RELAY_MODALS = (function () {
 		// Update the modal's content according to type
 		switch (type) {
 			case 'clientHistory':
+				$modal.find('.modal-content').removeClass('bg-black-gradient');
 				buildClientHistoryModal();
 				break;
 			case 'presentationDetails':
+				$modal.find('.modal-content').addClass('bg-black-gradient');
 				// If data-type is presentationDetails, we can expect a data-presid as well
 				buildPresentationDetailsModal(button.data('presid'));
 				break;

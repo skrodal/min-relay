@@ -1,6 +1,6 @@
 <div id="relayModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="title">
 	<div class="modal-dialog" role="document"> <!-- modal-lg / modal-sm -->
-		<div class="modal-content bg-black-gradient">
+		<div class="modal-content">
 			<div class="modal-header bg-black-gradient">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
 				<h4 id="title" class="modal-title uninett-fontColor-white"></h4>
@@ -64,10 +64,12 @@
                 </table>
             </div>
 		</div>
+		<p>
+			<small class="text-muted">Historikk for hits siden <span class="hitsFirstRecord xhr"><!--></span>.</small><br>
+			<small class="text-muted">Hits for innhold laget med gammelt brukernavn (eks. ved fusjonering) registreres ikke.</small>
+		</p>
 		<button id="presentation_delete" data-loading-text="Vent..." type="button" class="btn bg-red icon ion-android-delete"> SLETT OPPTAK</button>
 	</div>
-
-
 
 	<!-- EMBED modal -->
 
